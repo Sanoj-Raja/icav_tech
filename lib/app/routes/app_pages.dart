@@ -1,5 +1,7 @@
 import 'package:get/get.dart';
 
+import 'package:icav_tech/app/modules/edit_profile/bindings/edit_profile_binding.dart';
+import 'package:icav_tech/app/modules/edit_profile/views/edit_profile_view.dart';
 import 'package:icav_tech/app/modules/home/bindings/home_binding.dart';
 import 'package:icav_tech/app/modules/home/views/home_view.dart';
 import 'package:icav_tech/app/modules/login/bindings/login_binding.dart';
@@ -36,6 +38,11 @@ class AppPages {
       name: _Paths.REGISTER,
       page: () => RegisterView(),
       binding: RegisterBinding(),
+    ),
+    GetPage(
+      name: _Paths.EDIT_PROFILE,
+      page: () => EditProfileView(),
+      binding: EditProfileBinding(),
     ),
   ];
 }

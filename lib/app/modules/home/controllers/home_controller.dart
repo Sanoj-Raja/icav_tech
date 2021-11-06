@@ -1,5 +1,6 @@
 import 'package:bot_toast/bot_toast.dart';
 import 'package:get/get.dart';
+import 'package:icav_tech/app/local_storage/sessions.dart';
 import 'package:icav_tech/app/routes/app_pages.dart';
 
 class HomeController extends GetxController {
@@ -19,34 +20,23 @@ class HomeController extends GetxController {
   void onClose() {}
 
   void editProfile() {
-    print('Edit Profile Clicked');
+    Get.toNamed(Routes.EDIT_PROFILE);
   }
 
   void contactUs() {
-    print('Contact Us Clicked');
-  }
-
-  void bankAccount() {
-    print('Bank Account Clicked');
-  }
-
-  void subscriptions() {
-    print('Subscriptions Clicked');
-  }
-
-  void faqs() {
-    print('FAQ Clicked');
+    BotToast.showText(text: 'Will be updated after joining...');
   }
 
   void help() {
-    print('Help Clicked');
+    BotToast.showText(text: 'Will be updated after joining...');
   }
 
   void rateApp() {
-    BotToast.showText(text: 'Comming Soon...');
+    BotToast.showText(text: 'Will be updated after joining...');
   }
 
   void logout() {
+    SessionManager.clearSession();
     Get.offAllNamed(Routes.SPLASH);
   }
 }

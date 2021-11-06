@@ -5,12 +5,14 @@ import 'package:icav_tech/app/constants/app_strings.dart';
 Rx<String> USER_TOKEN = ''.obs;
 Rx<String> USER_NAME = AppStrings.addName.obs;
 Rx<String> USER_IMAGE = ''.obs;
+Rx<String> USER_EMAIL = ''.obs;
 
 class SessionManager {
   static final userStorage = GetStorage();
   static final String userToken = 'User Token';
   static final String userName = 'User Name';
   static final String userImage = 'User Image';
+  static final String userEmail = 'User Email';
 
   static Future<void> saveUserToken(String token) async {
     USER_TOKEN.value = token;
@@ -49,6 +51,19 @@ class SessionManager {
     USER_IMAGE.value = image;
     print("User Image ==> $image.");
     return image;
+  }
+
+  static Future<void> saveUserEmail(String email) async {
+    USER_EMAIL.value = email;
+    userStorage.write(userEmail, email);
+    print("User Eamil Saved ==> $email.");
+  }
+
+  static Future<String> getUserEmail() async {
+    String email = await userStorage.read(userEmail) ?? '';
+    USER_EMAIL.value = email;
+    print("User Image ==> $email.");
+    return email;
   }
 
   static void clearSession() {

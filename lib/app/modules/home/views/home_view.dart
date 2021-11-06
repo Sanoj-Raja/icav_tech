@@ -62,7 +62,7 @@ class HomeView extends GetView<HomeController> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(120),
                         child: USER_IMAGE.value != ''
-                            ? Image.network(
+                            ? Image.asset(
                                 USER_IMAGE.value,
                                 height: 70,
                                 width: 70,

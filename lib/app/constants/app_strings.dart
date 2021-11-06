@@ -5,6 +5,7 @@ class AppStrings {
   static const String register = 'Register';
   static const String or = 'OR';
   static const String mobileNumber = 'Mobile Number';
+  static const String name = 'Name';
   static const String email = 'Email';
   static const String password = 'Password';
   static const String confirmPassword = 'Confirm Password';
@@ -25,4 +26,8 @@ class AppStrings {
   static const String contactUs = 'Contact Us';
   static const String contactUsSubHeading =
       'Customer Support regarding any issue/query';
+
+  static const String saveAndUpdate = 'Save & Update';
+  static const String editProfile = 'Edit Profile';
+
 }
