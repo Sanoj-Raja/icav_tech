@@ -26,8 +26,8 @@ class AppStrings {
   static const String contactUs = 'Contact Us';
   static const String contactUsSubHeading =
       'Customer Support regarding any issue/query';
-
   static const String saveAndUpdate = 'Save & Update';
   static const String editProfile = 'Edit Profile';
-
+  static const String profileUpdateSuccessfully =
+      'Profile updated successfully.';
 }

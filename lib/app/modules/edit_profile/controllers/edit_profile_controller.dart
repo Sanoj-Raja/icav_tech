@@ -1,3 +1,4 @@
+import 'package:bot_toast/bot_toast.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:icav_tech/app/constants/app_strings.dart';
@@ -33,6 +34,7 @@ class EditProfileController extends GetxController {
       SessionManager.saveUserEmail(emailTextController.text);
       SessionManager.saveUserImage(profileImage.value).then(
         (_) {
+          BotToast.showText(text: AppStrings.profileUpdateSuccessfully);
           Get.back();
         },
       );

@@ -68,6 +68,10 @@ class SessionManager {
 
   static void clearSession() {
     userStorage.erase();
+    USER_TOKEN.value = '';
+    USER_NAME.value = AppStrings.addName;
+    USER_IMAGE.value = '';
+    USER_EMAIL.value = '';
     print("Session Cleared.");
   }
 }
