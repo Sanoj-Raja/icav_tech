@@ -12,6 +12,17 @@ class AppStrings {
   static const String dontHaveAccount = "Don't have an account? ";
   static const String registerNow = 'Register Now';
   static const String countryCode = '+91';
+  static const String addName = 'Add Name';
   static const String byTappingIAgree = 'By Tapping I Agree ';
   static const String termsAndCondition = 'Terms & Condition';
+  static const String logout = 'Logout';
+  static const String viewAndEditProfile = 'View & Edit Profile';
+  static const String notifications = 'Notifications';
+  static const String rateApp = 'Rate App';
+  static const String rateAppSubHeading = 'Rate us at Play Store / Apple Store';
+  static const String help = 'Help';
+  static const String helpSubHeading = 'Privacy Policy, T&C, Legal';
+  static const String contactUs = 'Contact Us';
+  static const String contactUsSubHeading =
+      'Customer Support regarding any issue/query';
 }
