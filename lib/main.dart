@@ -32,6 +32,7 @@ Future<void> main() async {
               headline1: TextStyle(
                 color: AppColors.white,
                 fontSize: 20,
+                fontWeight: FontWeight.w700,
               ),
               headline2: TextStyle(
                 color: AppColors.lightGreyPrimaryText,

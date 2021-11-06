@@ -31,7 +31,7 @@ class LoginView extends GetView<LoginController> {
                     ),
                     Text(
                       AppStrings.login,
-                      style: Get.textTheme.headline2,
+                      style: Get.textTheme.headline1,
                     ),
                     VerticalGap(
                       gap: 20,
@@ -105,6 +105,7 @@ class LoginView extends GetView<LoginController> {
             ),
             VerticalGap(),
             Row(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Container(
                   width: Get.width * .15,
