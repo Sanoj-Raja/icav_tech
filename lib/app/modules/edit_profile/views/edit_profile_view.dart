@@ -119,8 +119,8 @@ class EditProfileView extends GetView<EditProfileController> {
                         ),
                       )
                     : USER_IMAGE.value != ''
-                        ? Image.asset(
-                            USER_IMAGE.value,
+                        ? Image.file(
+                            File(USER_IMAGE.value),
                             height: 120,
                             width: 120,
                             fit: BoxFit.cover,

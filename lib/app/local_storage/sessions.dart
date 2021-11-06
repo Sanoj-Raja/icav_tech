@@ -62,7 +62,7 @@ class SessionManager {
   static Future<String> getUserEmail() async {
     String email = await userStorage.read(userEmail) ?? '';
     USER_EMAIL.value = email;
-    print("User Image ==> $email.");
+    print("User Email ==> $email.");
     return email;
   }
 

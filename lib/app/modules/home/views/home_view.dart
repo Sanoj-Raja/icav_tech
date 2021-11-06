@@ -1,3 +1,4 @@
+import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:get/get.dart';
@@ -62,8 +63,8 @@ class HomeView extends GetView<HomeController> {
                       child: ClipRRect(
                         borderRadius: BorderRadius.circular(120),
                         child: USER_IMAGE.value != ''
-                            ? Image.asset(
-                                USER_IMAGE.value,
+                            ? Image.file(
+                                File(USER_IMAGE.value),
                                 height: 70,
                                 width: 70,
                                 fit: BoxFit.cover,
