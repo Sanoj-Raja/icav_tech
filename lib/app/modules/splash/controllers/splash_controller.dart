@@ -1,4 +1,5 @@
 import 'package:get/get.dart';
+import 'package:icav_tech/app/local_storage/sessions.dart';
 import 'package:icav_tech/app/routes/app_pages.dart';
 
 class SplashController extends GetxController {
@@ -22,7 +23,14 @@ class SplashController extends GetxController {
 
     Future.delayed(Duration(seconds: 2)).then(
       (_) {
-        Get.offNamed(Routes.LOGIN);
+        SessionManager.getUserToken().then(
+          (token) {
+            if (token.isEmpty)
+              Get.offNamed(Routes.LOGIN);
+            else
+              Get.offNamed(Routes.HOME);
+          },
+        );
       },
     );
   }

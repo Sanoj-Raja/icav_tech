@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:icav_tech/app/local_storage/sessions.dart';
 import 'package:icav_tech/app/routes/app_pages.dart';
 
 class LoginController extends GetxController {
@@ -22,7 +23,11 @@ class LoginController extends GetxController {
 
   void login() {
     if (loginFormKey.currentState!.validate()) {
-      Get.offAllNamed(Routes.HOME);
+      SessionManager.saveUserToken('Login token saved.').then(
+        (_) {
+          Get.offAllNamed(Routes.HOME);
+        },
+      );
     }
   }
 
